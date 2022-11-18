@@ -1,26 +1,27 @@
 {
-    "name": "matheusab/php-js-pretty-printer",
-    "description": "",
-    "type": "library",
-    "config": {
-        "platform": {
-            "php": "7.4"
-        }
-    },
-    "repositories": {
-    },
-    "require-dev": {
-    },
-    "require": {
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "MAB\\JS\\": "src/"
-        }
-    }
+	"name": "matheusab/php-js-pretty-printer",
+	"description": "",
+	"type": "library",
+	"config": {
+		"platform": {
+			"php": "7.4"
+		}
+	},
+	"repositories": {
+	},
+	"require-dev": {
+	},
+	"require": {
+		"php": ">=7.2"
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\": "tests/"
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"MAB\\JS\\": "src/"
+		}
+	}
 }

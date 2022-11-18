@@ -21,7 +21,8 @@ abstract class ArrayOrObject extends Structure implements ArrayAccess, Countable
         return "\n" . $this->tab();
     }
 
-    public function offsetSet($offset, $value)
+
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->items[] = $value;
@@ -30,16 +31,17 @@ abstract class ArrayOrObject extends Structure implements ArrayAccess, Countable
         }
     }
 
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->items[$offset]);
     }
 
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->items[$offset]);
     }
 
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return $this->items[$offset] ?? null;
