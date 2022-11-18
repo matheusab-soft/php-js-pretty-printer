@@ -2,6 +2,15 @@
 	"name": "matheusab/php-js-pretty-printer",
 	"description": "",
 	"type": "library",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Matheus Alves Barbosa",
+			"email": "contato@matheusab.com",
+			"homepage": "www.matheusab.com",
+			"role": "maintainer"
+		}
+	],
 	"config": {
 		"platform": {
 			"php": "7.4"
