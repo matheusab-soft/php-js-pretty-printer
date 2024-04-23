@@ -4,6 +4,8 @@ namespace MAB\JS;
 
 class JS
 {
+    public static $INDENT_CONTENT = '    ';
+
     public static function format(array $lines, int $level = 0): string
     {
         $str = '';
@@ -18,7 +20,7 @@ class JS
                 if (strpos($v, "\n") !== false) {
                     $str .= self::format(explode("\n", $v), $level);
                 } else {
-                    $str .= str_repeat('    ', $level) . $v;
+                    $str .= str_repeat(self::$INDENT_CONTENT, $level) . $v;
 
                     if (!$isLast || $level > 0) {
                         $str .= "\n";

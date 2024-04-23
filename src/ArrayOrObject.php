@@ -5,6 +5,9 @@ namespace MAB\JS;
 use ArrayAccess;
 use Countable;
 
+/**
+ *
+ */
 abstract class ArrayOrObject extends Structure implements ArrayAccess, Countable
 {
     public array $items;

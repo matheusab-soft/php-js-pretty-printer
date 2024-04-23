@@ -2,6 +2,9 @@
 
 namespace MAB\JS;
 
+/**
+ * @see ArrayOrObject
+ */
 class JSObject extends ArrayOrObject
 {
     protected bool $breakLine = true;

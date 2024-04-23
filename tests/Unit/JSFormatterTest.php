@@ -43,17 +43,17 @@ class JSFormatterTest extends TestCase
                 ],
                 '}',
             ],
-            <<<str
-        const x = 1;
-        let y = 2;
-        
-        function z(a, b) {
-            return [
-                a,
-                b
-            ];
-        }
-        str,
+            <<<js
+                const x = 1;
+                let y = 2;
+                
+                function z(a, b) {
+                    return [
+                        a,
+                        b
+                    ];
+                }
+                js,
         ];
     }
 
@@ -80,4 +80,43 @@ class JSFormatterTest extends TestCase
         ];
     }
 
+    public function testDefaultIndent()
+    {
+        $actual = JS::object([
+            'a' => [
+                'a_a' => [1, 2]
+            ]
+        ])->format();
+        $expected = <<<js
+            {
+                "a": {
+                    "a_a": [1, 2]
+                }
+            }
+            js;
+
+        $this->assertEquals($expected, $actual);
+
+
+    }
+    public function testCustomIndent()
+    {
+        JS::$INDENT_CONTENT = '  ';
+        $actual = JS::object([
+            'a' => [
+                'a_a' => [1, 2]
+            ]
+        ])->format();
+        $expected = <<<js
+            {
+              "a": {
+                "a_a": [1, 2]
+              }
+            }
+            js;
+
+        $this->assertEquals($expected, $actual);
+
+
+    }
 }

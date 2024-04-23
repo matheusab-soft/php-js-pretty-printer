@@ -3,7 +3,7 @@
 This project allows you to "prettily" generate JS syntax (separators and line breaks included) through PHP classes.
 
 It differs from [json_encode](https://www.php.net/manual/en/function.json-encode.php) due to its capability of printing
-raw js as well as strings.
+**raw js** as well as strings.
 
 # Installation
 Include it via Composer:

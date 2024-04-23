@@ -2,6 +2,9 @@
 
 namespace MAB\JS;
 
+/**
+ * @see ArrayOrObject
+ */
 class JSArray extends ArrayOrObject
 {
     protected bool $breakLine = false;
@@ -42,11 +45,11 @@ class JSArray extends ArrayOrObject
     {
         if ($this->breakLine) {
             $ret = "["
-                . $this->breakLineAndIndent()
-                . $items
-                . "\n"
-                . $this->tab(-1)
-                . "]";
+                   . $this->breakLineAndIndent()
+                   . $items
+                   . "\n"
+                   . $this->tab(-1)
+                   . "]";
         } else {
             $ret = "[$items]";
         }

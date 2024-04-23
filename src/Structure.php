@@ -64,7 +64,9 @@ abstract class Structure
 
     /**
      * Determines if an array is associative.
+     *
      * @param array $array
+     *
      * @return bool
      */
     private function isAssociative(array $array): bool
@@ -76,7 +78,7 @@ abstract class Structure
 
     protected function tab(int $increment = 0): string
     {
-        return str_repeat('    ', $this->indentationLevel + $increment);
+        return str_repeat(JS::$INDENT_CONTENT, $this->indentationLevel + $increment);
     }
 
     public function __toString()
